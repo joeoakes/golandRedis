@@ -22,13 +22,13 @@ func main() {
 	}
 	fmt.Println(pong) // Output: PONG
 
-	// Set a key
-	err = rdb.Set(ctx, "key", "value", 0).Err()
+	// Set a key  Create
+	err = rdb.Set(ctx, "1234", "{'BestTeacher' : 'Joe Oakes'}", 0).Err()
 	if err != nil {
 		panic(err)
 	}
 
-	// Get a key
+	// Get a key Read
 	val, err := rdb.Get(ctx, "key").Result()
 	if err != nil {
 		panic(err)
